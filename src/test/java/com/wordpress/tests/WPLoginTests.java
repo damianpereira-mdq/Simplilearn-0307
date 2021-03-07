@@ -19,18 +19,10 @@ public class WPLoginTests {
 		driver= StartBrowser.startBrowser(driver, "Chrome", "https://www.wordpress.com/");
 		System.out.println(driver.getTitle());
 		
-		WPHomePage homePage = PageFactory.initElements(driver, WPHomePage.class);
+		WPHomePage homePage = PageFactory.initElements(driver, WPHomePage.class);			
 		
-			
-		//WPHomePage homePage = new WPHomePage(driver);
-		homePage.clickLogin();
+		homePage.clickLogin();		
 		
-		//WPLoginPage loginPage = new WPLoginPage(driver);
-		//loginPage.enterUserId ("damianpereiramdq");
-		
-		
-	}
-
-	
+	}	
 
 }
