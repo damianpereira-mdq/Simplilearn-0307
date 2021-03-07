@@ -1,11 +1,12 @@
 package com.wordpress.tests;
 
-import com.wordpress.tests.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.wordpress.pages.StartBrowser;
+import com.wordpress.pages.WPHomePage;
 import com.wordpress.pages.WPLoginPage;
 
 public class WPLoginTests {
@@ -16,6 +17,13 @@ public class WPLoginTests {
 	public void invalidLogin () {
 		
 		driver= StartBrowser.startBrowser(driver, "Chrome", "https://www.wordpress.com/");
+		System.out.println(driver.getTitle());
+		
+		WPHomePage homePage = PageFactory.initElements(driver, WPHomePage.class);
+		
+			
+		//WPHomePage homePage = new WPHomePage(driver);
+		homePage.clickLogin();
 		
 		//WPLoginPage loginPage = new WPLoginPage(driver);
 		//loginPage.enterUserId ("damianpereiramdq");

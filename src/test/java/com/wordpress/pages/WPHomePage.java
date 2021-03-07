@@ -14,7 +14,7 @@ public class WPHomePage {
 		this.driver = driver;
 	}
 	
-	@FindBy(name="Log In") WebElement loginButton;	
+	@FindBy(xpath = "//*[@id=\"lpc-header-nav\"]/div/div/div[1]/div/nav/ul[2]/li[1]/a") WebElement loginButton;	
 	@FindBy(name="Get Started")	WebElement signupButton;	
 	@FindBy(name="Products") WebElement products;	
 	@FindBy(name="Features") WebElement features;	
